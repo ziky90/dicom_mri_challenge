@@ -116,4 +116,6 @@ Experiment with simple_cnn (training on CPU):
 
 Currently available models are more in detail described [here](https://github.com/ziky90/dicom_mri_challenge/blob/feature/implement_cnn_model/models/README.md).
 
+## Prediction
+Prediction from the keras model can be done simply by the script `python main_predict_model.py`.
 
