@@ -141,7 +141,6 @@ def load_complete_data(data_path):
             o_contours.append(poly_to_mask(o_contour_list, width, height))
             i_contours.append(poly_to_mask(i_contour_list, width, height))
     images = np.array(images)
-    images = np.expand_dims(images, -1)
     o_contours = np.array(o_contours)
     i_contours = np.array(i_contours)
     assert images.shape[0] == o_contours.shape[0], \

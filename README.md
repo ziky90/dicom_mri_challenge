@@ -36,16 +36,16 @@ or in order to obtain the diff of o-contour and i-contour by:
 
 `python tools/main_visualizer.py --contour_path tools/visualization_examples/IM-0001-0099-icontour-manual.txt --o_contour_path tools/visualization_examples/IM-0001-0099-ocontour-manual.txt` 
 
-![visualized dicom image](https://github.com/ziky90/dicom_mri_challenge/blob/feature/implement_cnn_model/resources/dicom_188.png)
+![visualized dicom image](https://github.com/ziky90/dicom_mri_challenge/blob/master/resources/dicom_188.png)
 visualized example DICOM image
 
-![visualized contour image](https://github.com/ziky90/dicom_mri_challenge/blob/feature/implement_cnn_model/resources/contour_188.png)
+![visualized contour image](https://github.com/ziky90/dicom_mri_challenge/blob/master/resources/contour_188.png)
 visualized example contour mask image
 
-![visualized dicom_and:contour image](https://github.com/ziky90/dicom_mri_challenge/blob/feature/implement_cnn_model/resources/dicom_contour_188.png)
+![visualized dicom_and:contour image](https://github.com/ziky90/dicom_mri_challenge/blob/master/resources/dicom_contour_188.png)
 visualized example DICOM and contour mask image in one figure
 
-![visualized contours_diff](https://github.com/ziky90/dicom_mri_challenge/blob/feature/implement_cnn_model/resources/contours_99_diff.png)
+![visualized contours_diff](https://github.com/ziky90/dicom_mri_challenge/blob/master/resources/contours_99_diff.png)
 visualized example o-contour and i-contour diff
 
 ### Unit tests for the input files
@@ -121,8 +121,11 @@ Experiment with simple_cnn (training on CPU):
 
 ### Available models
 
-Currently available models are more in detail described [here](https://github.com/ziky90/dicom_mri_challenge/blob/feature/implement_cnn_model/models/README.md).
+Currently available models are more in detail described [here](https://github.com/ziky90/dicom_mri_challenge/blob/master/models/README.md).
 
 ## Prediction
 Prediction from the keras model can be done simply by the script `python main_predict_model.py`.
 
+## Unsupervised baseline models
+
+There were performed several unsupervised experiment in order to create sufficient baseline model. More details about unsupervised models can be found in [here](https://github.com/ziky90/dicom_mri_challenge/blob/master/unsupervised/README.md).
