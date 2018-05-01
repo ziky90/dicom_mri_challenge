@@ -3,3 +3,5 @@ numpy==1.14.1
 Pillow==5.0.0
 tensorflow==1.7.0   # for GPU machines use tensorflow-gpu==1.7.0
 matplotlib==2.1.2
+scikit-learn==0.19.1
+scikit-image==0.13.1

@@ -20,7 +20,7 @@ def parse_args():
 
     :return: parsed arguments
     """
-    parser = argparse.ArgumentParser('Visualize DICOM and contour')
+    parser = argparse.ArgumentParser('Train the CNN model')
     parser.add_argument('--batch_size', type=int, required=False, default=24,
                         help='Batch size.')
     parser.add_argument('--epochs', type=int, required=False, default=1,
