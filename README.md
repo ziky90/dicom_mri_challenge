@@ -128,4 +128,4 @@ Prediction from the keras model can be done simply by the script `python main_pr
 
 ## Unsupervised baseline models
 
-There were performed several unsupervised experiment in order to create sufficient baseline model. More details about unsupervised models can be found in [here](https://github.com/ziky90/dicom_mri_challenge/blob/master/unsupervised/README.md).
+There were performed several unsupervised experiment in order to create sufficient baseline model. More details about unsupervised models can be found in [here](https://github.com/ziky90/dicom_mri_challenge/blob/master/unsupervised_models/README.md).
