@@ -30,7 +30,11 @@ Example visualizations can be obtained by:
 
 or by
 
-`python tools/main_visualizer.py --dicom_path tools/visualization_examples/188.dcm --contour_path tools/visualization_examples/IM-0001-0188-icontour-manual.txt` 
+`python tools/main_visualizer.py --dicom_path tools/visualization_examples/188.dcm --contour_path tools/visualization_examples/IM-0001-0188-icontour-manual.txt`
+
+or in order to obtain the diff of o-contour and i-contour by:
+
+`python tools/main_visualizer.py --contour_path tools/visualization_examples/IM-0001-0099-icontour-manual.txt --o_contour_path tools/visualization_examples/IM-0001-0099-ocontour-manual.txt` 
 
 ![visualized dicom image](https://github.com/ziky90/dicom_mri_challenge/blob/feature/implement_cnn_model/resources/dicom_188.png)
 visualized example DICOM image
@@ -39,7 +43,10 @@ visualized example DICOM image
 visualized example contour mask image
 
 ![visualized dicom_and:contour image](https://github.com/ziky90/dicom_mri_challenge/blob/feature/implement_cnn_model/resources/dicom_contour_188.png)
-visualized example DICOM and contour mask image in one figure 
+visualized example DICOM and contour mask image in one figure
+
+![visualized contours_diff](https://github.com/ziky90/dicom_mri_challenge/blob/feature/implement_cnn_model/resources/contours_99_diff.png)
+visualized example o-contour and i-contour diff
 
 ### Unit tests for the input files
 

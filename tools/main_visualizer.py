@@ -17,7 +17,10 @@ def parse_args():
     parser.add_argument('--dicom_path', type=str, required=False, default=None,
                         help='Path to the DICOM file.')
     parser.add_argument('--contour_path', type=str, required=False, default=None,
-                        help='Path to the contour file.')
+                        help='Path to the i-contour file.')
+    parser.add_argument('--o_contour_path', type=str, required=False,
+                        default=None,
+                        help='Path to the o-contour file.')
     return parser.parse_args()
 
 
@@ -49,6 +52,27 @@ def visualize_contour_mask(contour_path, width=256, height=256):
     plt.show()
 
 
+def visualize_contour_masks_diff(o_contour_path, i_contour_path, width=256,
+                                 height=256):
+    """
+    Visualize diff of i_contour and o_contour.
+
+    :param o_contour_path: Path to the contour file.
+    :type o_contour_path: str
+    :param i_contour_path: Path to the contour file.
+    :type i_contour_path: str
+    :param width: Width of the contour.
+    :type width: int
+    :param height: Height of the contour.
+    :type height: int
+    """
+    i_image = poly_to_mask(parse_contour_file(i_contour_path), width, height)
+    o_image = poly_to_mask(parse_contour_file(o_contour_path), width, height)
+    image = o_image ^ i_image
+    plt.imshow(image)
+    plt.show()
+
+
 def visualize_dicom_with_contour(dicom_path, contour_path):
     """
     Visualize the DICOM and contour mask.
@@ -73,6 +97,7 @@ if __name__ == '__main__':
     args = parse_args()
     dicom_path = args.dicom_path
     contour_path = args.contour_path
+    o_contour_path = args.o_contour_path
 
     if dicom_path is not None and contour_path is not None:
         visualize_dicom_with_contour(dicom_path, contour_path)
@@ -80,3 +105,5 @@ if __name__ == '__main__':
         visualize_dicom(dicom_path)
     if contour_path is not None:
         visualize_contour_mask(contour_path)
+        if o_contour_path is not None:
+            visualize_contour_masks_diff(o_contour_path, contour_path)
